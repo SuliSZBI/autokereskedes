@@ -1,0 +1,85 @@
+.navbar-container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
+.navbar-logo {
+    color: var(--feher);
+    font-size: xx-large;
+}
+
+.navbar-main {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.navbar-main a {
+    color: var(--feher);
+    text-decoration: none;
+}
+
+.navbar-regisztracio {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.navbar-regisztracio a {
+    color: var(--feher);
+    text-decoration: none;
+}
+
+.navbar-main a.active {
+    color: var(--narancs);
+    font-weight: 700;
+    border-bottom: 2px solid var(--narancs);
+}
+
+.navbar-regisztracio-link,
+.navbar-login-link {
+    display: inline-block;
+}
+
+.rejtett {
+    display: none;
+}
+
+@media screen and (max-width: 550px) {
+    .navbar-container {
+        align-items: start;
+        justify-content: space-evenly;
+    }
+
+    .navbar-logo {
+        color: var(--feher);
+        font-size: large;
+    }
+
+    .rejtett {
+        display: inline-block;
+    }
+
+    .navbar-regisztracio {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .navbar-regisztracio-link,
+    .navbar-login-link {
+        display: none;
+    }
+
+    .inline-none-stilus {
+        display: none;
+    }
+
+    .inline-blokk-stilus {
+        display: inline-block;
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="shortcut icon"
+            href="/images/logo.png"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="/css/stilus.css"
+        />
+        <title>Autókereskedés szerveroldali támogatása</title>
+    </head>
+    <body>
+        <%- include('./nav.ejs') %>
+        <div id="ujkocsi-container">
+            <h1>Új kocsi felvétele az adatbázisba</h1>
+            <form>
+                <table>
+                    <tr>
+                        <td>Név:</td>
+                        <td>
+                            <input
+                                type="text"
+                                id="nev"
+                            />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tipus:</td>
+                        <td>
+                            <input
+                                type="text"
+                                id="tipus"
+                            />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ár:</td>
+                        <td>
+                            <input
+                                type="number"
+                                id="ar"
+                            />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Képek:</td>
+                        <td>
+                            <textarea
+                                id="kepek"
+                                rows="4"
+                            ></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button onclick="feltoltes(event)">Feltölt</button>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <script src="/js/feltolt.js"></script>
+    </body>
+</html>

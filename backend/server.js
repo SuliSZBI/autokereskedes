@@ -7,12 +7,14 @@ const app = express();
 
 // middleware-k
 app.set('view engine', 'ejs');
+app.use(express.json());
 
 // statikus mappa beállítása
 app.use(express.static(path.resolve(__dirname, 'public')));
 
 // route-ok beállítása
 app.use('/', require('./routes/mainRoutes'));
+app.use('/ujkocsi', require('./routes/ujKocsiRoutes'));
 
 // 404-es hiba!
 app.all('*', (req, res) => {

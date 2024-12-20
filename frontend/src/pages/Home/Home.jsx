@@ -20,10 +20,19 @@ const Home = () => {
     ];
 
     const kattintas = (index) => {
+        let homeSliderKepTartok = document.querySelectorAll(
+            '.home-slider-kep-tarto'
+        );
+
+        for (let i = 0; i < homeSliderKepTartok.length; i++) {
+            homeSliderKepTartok[i].classList.remove('aktiv');
+        }
+
         let homeContainer = document.querySelector('.home-container');
         homeContainer.style.backgroundImage = `url('${hatterKocsik[index].kep}')`;
         let homeContent = document.querySelector('.home-content');
         homeContent.innerHTML = `<h1>${kocsik[index].tipus}</h1>`;
+        homeSliderKepTartok[index].classList.add('aktiv');
     };
 
     useEffect(() => {
@@ -34,6 +43,9 @@ const Home = () => {
             let homeSliderKepTarto = document.createElement('div');
             homeSliderKepTarto.setAttribute('class', 'home-slider-kep-tarto');
             homeSliderKepTarto.style.backgroundImage = `url('${kocsik[i].kep}')`;
+            if (i === 0) {
+                homeSliderKepTarto.classList.add('aktiv');
+            }
             homeSlider.appendChild(homeSliderKepTarto);
 
             homeSliderKepTarto.addEventListener('click', () => {

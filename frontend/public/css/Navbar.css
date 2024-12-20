@@ -38,6 +38,7 @@
 .navbar-main a.active {
     color: var(--narancs);
     font-weight: 700;
+    font-size: 1.1em;
     border-bottom: 2px solid var(--narancs);
 }
 

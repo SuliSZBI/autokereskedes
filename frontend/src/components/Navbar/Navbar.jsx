@@ -28,13 +28,14 @@ const Navbar = () => {
         <div className="navbar-container">
             <div className="navbar-logo">SportCars.</div>
             <div className="navbar-main">
+                <Link to="/info">Rólunk</Link>
                 <Link
                     to="/home"
                     className="active"
                 >
                     Bemutató
                 </Link>
-                <Link to="/markak">Márkák</Link>
+                <Link to="/autok">Autók</Link>
             </div>
             <div className="navbar-regisztracio">
                 <Link

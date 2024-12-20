@@ -23,6 +23,16 @@ app.all('*', (req, res) => {
     }
 });
 
-app.listen(PORT, () => {
-    console.log(`http://localhost:${PORT}`);
-});
+// adatbázis csatlakozás
+const { dbConnect } = require('./utils/dbConnection');
+
+dbConnect
+    .then(() => {
+        console.log('Sikeres adatbázis csatlakozás!');
+        app.listen(PORT, () => {
+            console.log(`http://localhost:${PORT}`);
+        });
+    })
+    .catch((error) => {
+        console.log('Valami hiba történt: ' + error.message);
+    });

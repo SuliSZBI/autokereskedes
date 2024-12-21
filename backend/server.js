@@ -15,6 +15,8 @@ app.use(express.static(path.resolve(__dirname, 'public')));
 // route-ok beállítása
 app.use('/', require('./routes/mainRoutes'));
 app.use('/ujkocsi', require('./routes/ujKocsiRoutes'));
+app.use('/kocsik', require('./routes/kocsikRoutes'));
+app.use('/egyedikocsi', require('./routes/egyediKocsiRoutes'));
 
 // 404-es hiba!
 app.all('*', (req, res) => {

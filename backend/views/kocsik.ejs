@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="shortcut icon"
+            href="/images/logo.png"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="/css/stilus.css"
+        />
+        <title>Autókereskedés szerveroldali támogatása</title>
+    </head>
+    <body>
+        <%- include('./nav.ejs') %>
+        <div id="kocsik-container">
+            <% for( let i = 0; i < autok.length; i++ ) { %>
+            <div class="kocsi-container">
+                <h1>Név: <%= autok[i].nev %></h1>
+                <h3>Típus: <%= autok[i].tipus %></h3>
+                <h3>Ár: <%= autok[i].ar %>Ft</h3>
+                <div class="kocsik-kepek">
+                    <% for( let j = 0; j < autok[i].kepek.length; j++ ) { %>
+                    <div class="kocsik-kep">
+                        <img src="/images/<%= autok[i].kepek[j] %>" />
+                    </div>
+                    <% } %>
+                </div>
+                <div class="kocsik-gombok">
+                    <button onclick="modosit('<%= autok[i]._id %>')">
+                        Módosít
+                    </button>
+                    <button onclick="torol('<%= autok[i]._id %>')">
+                        Töröl
+                    </button>
+                </div>
+            </div>
+            <% } %>
+        </div>
+        <script src="/js/modTorKocsi.js"></script>
+    </body>
+</html>

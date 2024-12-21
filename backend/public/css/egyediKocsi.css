@@ -1,0 +1,26 @@
+#egyedikocsi-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    justify-content: center;
+    height: 100vh;
+}
+
+form {
+    font-size: 1.5em;
+}
+
+input,
+textarea,
+button {
+    font-size: 1.5em;
+}
+
+button {
+    background-color: var(--narancs);
+    border: none;
+    border-radius: 5px;
+    color: var(--feher);
+    padding: 10px;
+}

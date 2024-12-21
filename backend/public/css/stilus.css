@@ -2,6 +2,8 @@
 @import url('./nav.css');
 @import url('./main.css');
 @import url('./ujKocsi.css');
+@import url('./kocsik.css');
+@import url('./egyediKocsi.css');
 
 * {
     box-sizing: border-box;

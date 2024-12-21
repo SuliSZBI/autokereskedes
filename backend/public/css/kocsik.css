@@ -1,0 +1,29 @@
+#kocsik-container {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    column-gap: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    padding-top: 100px;
+}
+
+.kocsi-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.kocsik-kepek {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.kocsik-kep {
+    width: 24%;
+}
+
+.kocsik-kep img {
+    object-fit: fill;
+    width: 100%;
+}

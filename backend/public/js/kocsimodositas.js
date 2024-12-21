@@ -1,6 +1,7 @@
-function feltoltes(event) {
+function modositas(event) {
     event.preventDefault();
 
+    const id = document.querySelector('#hidden').value;
     const nev = document.querySelector('#nev').value;
     const tipus = document.querySelector('#tipus').value;
     const ar = document.querySelector('#ar').value;
@@ -8,10 +9,10 @@ function feltoltes(event) {
 
     const kepek = kepekTextarea.split('\n');
 
-    const toltes = async () => {
+    const modosit = async () => {
         try {
-            const response = await fetch('/ujkocsi', {
-                method: 'POST',
+            const response = await fetch(`/egyedikocsi/${id}`, {
+                method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
                 },
@@ -19,7 +20,7 @@ function feltoltes(event) {
             });
 
             if (response.ok) {
-                window.alert('Sikeres feltöltés!');
+                window.alert('Sikeres módosítás!');
                 window.location.href = '/kocsik';
             } else {
                 throw new Error();
@@ -29,5 +30,5 @@ function feltoltes(event) {
         }
     };
 
-    toltes();
+    modosit();
 }

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="shortcut icon"
+            href="/images/logo.png"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="/css/stilus.css"
+        />
+        <title>Autókereskedés szerveroldali támogatása</title>
+    </head>
+    <body>
+        <%- include('./nav.ejs') %>
+        <div id="egyedikocsi-container">
+            <h1>Egyedi kocsi módosítása az adatbázisban</h1>
+            <form>
+                <input
+                    type="hidden"
+                    id="hidden"
+                    value="<%= auto._id %>"
+                />
+                <table>
+                    <tr>
+                        <td>Név:</td>
+                        <td>
+                            <input
+                                type="text"
+                                id="nev"
+                                value="<%= auto.nev %>"
+                            />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tipus:</td>
+                        <td>
+                            <input
+                                type="text"
+                                id="tipus"
+                                value="<%= auto.tipus %>"
+                            />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ár:</td>
+                        <td>
+                            <input
+                                type="number"
+                                id="ar"
+                                value="<%= auto.ar %>"
+                            />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Képek:</td>
+                        <td>
+                            <textarea
+                                id="kepek"
+                                rows="4"
+                            >
+<%= textareaSzoveg %></textarea
+                            >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button onclick="modositas(event)">Módosít</button>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <script src="/js/kocsimodositas.js"></script>
+    </body>
+</html>

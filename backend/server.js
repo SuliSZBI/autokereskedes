@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const path = require('node:path');
+const cors = require('cors');
 
 const PORT = process.env.PORT || 5000;
 const app = express();
@@ -8,6 +9,7 @@ const app = express();
 // middleware-k
 app.set('view engine', 'ejs');
 app.use(express.json());
+app.use(cors());
 
 // statikus mappa beállítása
 app.use(express.static(path.resolve(__dirname, 'public')));
@@ -17,6 +19,7 @@ app.use('/', require('./routes/mainRoutes'));
 app.use('/ujkocsi', require('./routes/ujKocsiRoutes'));
 app.use('/kocsik', require('./routes/kocsikRoutes'));
 app.use('/egyedikocsi', require('./routes/egyediKocsiRoutes'));
+app.use('/autok', require('./routes/autokRoutes'));
 
 // 404-es hiba!
 app.all('*', (req, res) => {

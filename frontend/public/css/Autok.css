@@ -1,0 +1,131 @@
+.autok-container {
+    background-image: url('/images/maserati-02.jpg');
+    background-attachment: fixed;
+    color: var(--feher);
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    min-height: 100vh;
+    padding-top: 100px;
+    width: 100%;
+}
+
+.autok-main-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+}
+
+.autok-auto-container {
+    background-color: rgba(128, 128, 128, 0.219);
+    border: 0.5px solid var(--narancs);
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin: 1em auto;
+    padding: 1em;
+    width: 80%;
+}
+
+.autok-auto-container img {
+    width: 100%;
+}
+
+.autok-auto-container button {
+    background-color: var(--narancs);
+    border: none;
+    color: var(--feher);
+    font-family: var(--fredoka);
+    font-size: 1.5em;
+    padding: 1em;
+    width: 100%;
+}
+
+.szuro {
+    cursor: pointer;
+    display: none;
+    left: 10px;
+    position: fixed;
+    top: 50px;
+    user-select: none;
+}
+
+.autok-bal-belso {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    position: fixed;
+    left: 10px;
+}
+
+.autok-jobb-belso {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    position: fixed;
+    right: 60px;
+}
+
+.marka {
+    display: flex;
+    gap: 1em;
+}
+
+@media screen and (max-width: 1300px) {
+    .autok-container {
+        grid-template-columns: 100%;
+    }
+
+    .autok-main-container {
+        grid-template-columns: 100%;
+        margin: 0px auto;
+        width: 75%;
+    }
+
+    .autok-bal-belso {
+        top: 110px;
+    }
+
+    .autok-jobb-belso {
+        top: 110px;
+        right: 10px;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .autok-container {
+        grid-template-columns: 100%;
+    }
+
+    .autok-auto-container {
+        width: 90%;
+    }
+
+    .autok-main-container {
+        grid-template-columns: 100%;
+        padding-top: 0px;
+        width: 100%;
+    }
+
+    .autok-bal-belso {
+        display: none;
+        top: 80px;
+    }
+
+    .autok-jobb-belso {
+        display: none;
+        top: 80px;
+        right: 10px;
+    }
+
+    .szuro {
+        display: inline-block;
+    }
+
+    .flex-stilus {
+        display: flex;
+    }
+
+    .none-stilus {
+        display: none;
+    }
+}

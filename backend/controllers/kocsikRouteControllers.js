@@ -2,7 +2,7 @@ const Car = require('../models/Car');
 
 exports.getKocsik = async (req, res) => {
     try {
-        let autok = await Car.find({});
+        let autok = await Car.find({}).sort({ nev: 'asc' });
 
         return res.status(200).render('kocsik.ejs', { autok });
     } catch (error) {

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Navbar from '../../components/Navbar/Navbar';
 
 const Home = () => {
     const kocsik = [
@@ -56,6 +57,7 @@ const Home = () => {
 
     return (
         <div className="home-container">
+            <Navbar aktiv="Home" />
             <div className="home-inner-container">
                 <div className="home-content">
                     <h1>Lamborghini</h1>

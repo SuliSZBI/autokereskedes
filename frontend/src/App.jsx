@@ -1,12 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home';
+import Autok from './pages/Autok/Autok';
 
 function App() {
     return (
         <BrowserRouter>
-            <Navbar />
             <Routes>
                 <Route
                     index
@@ -15,6 +14,10 @@ function App() {
                 <Route
                     path="/home"
                     element={<Home />}
+                />
+                <Route
+                    path="/autok"
+                    element={<Autok />}
                 />
             </Routes>
         </BrowserRouter>

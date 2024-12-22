@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = ({ aktiv }) => {
     let valtozo = 0;
 
     const felfed = () => {
@@ -31,11 +31,16 @@ const Navbar = () => {
                 <Link to="/info">Rólunk</Link>
                 <Link
                     to="/home"
-                    className="active"
+                    className={aktiv === 'Home' ? 'active' : ''}
                 >
                     Bemutató
                 </Link>
-                <Link to="/autok">Autók</Link>
+                <Link
+                    to="/autok"
+                    className={aktiv === 'Autok' ? 'active' : ''}
+                >
+                    Autók
+                </Link>
             </div>
             <div className="navbar-regisztracio">
                 <Link

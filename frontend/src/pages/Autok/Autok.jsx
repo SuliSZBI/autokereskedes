@@ -5,8 +5,6 @@ const Autok = () => {
     const [cars, setCars] = useState([]);
     const [szurok, setSzurok] = useState([]);
     const [arszuro, setArszuro] = useState(100000000000);
-    const [szelesseg, setSzelesseg] = useState(0);
-    const [paddingTop, setPaddingTop] = useState('');
 
     useEffect(() => {
         const autokLeker = async () => {
@@ -81,7 +79,7 @@ const Autok = () => {
     }
 
     function megtekint(id) {
-        console.log(id);
+        window.location.href = `/egyediauto/${id}`;
     }
 
     return (
@@ -218,8 +216,10 @@ const Autok = () => {
                             <h1>{elem.nev}</h1>
                             <p>Típus: {elem.tipus}</p>
                             <p>
-                                Ár:{' '}
-                                {new Intl.NumberFormat('de-DE').format(elem.ar)}{' '}
+                                Ár:
+                                {new Intl.NumberFormat('de-DE').format(
+                                    elem.ar
+                                )}{' '}
                                 Ft
                             </p>
                             <img src={`/images/${elem.kepek[0]}`} />

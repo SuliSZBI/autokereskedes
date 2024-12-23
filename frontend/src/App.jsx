@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home/Home';
 import Autok from './pages/Autok/Autok';
+import EgyediAuto from './pages/EgyediAuto/EgyediAuto';
 
 function App() {
     return (
@@ -18,6 +19,10 @@ function App() {
                 <Route
                     path="/autok"
                     element={<Autok />}
+                />
+                <Route
+                    path="/egyediauto/:id"
+                    element={<EgyediAuto />}
                 />
             </Routes>
         </BrowserRouter>

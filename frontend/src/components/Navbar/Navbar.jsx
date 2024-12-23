@@ -14,11 +14,13 @@ const Navbar = ({ aktiv }) => {
             navbarReisztracioLink.classList.remove('inline-blokk-stilus');
             navbarLoginLink.classList.add('inline-none-stilus');
             navbarLoginLink.classList.remove('inline-blokk-stilus');
+            console.log('itt');
         } else {
             navbarReisztracioLink.classList.add('inline-blokk-stilus');
             navbarReisztracioLink.classList.remove('inline-none-stilus');
             navbarLoginLink.classList.add('inline-blokk-stilus');
             navbarLoginLink.classList.remove('inline-none-stilus');
+            console.log('ott');
         }
 
         valtozo++;

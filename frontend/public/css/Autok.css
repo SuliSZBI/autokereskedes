@@ -94,6 +94,13 @@
 @media screen and (max-width: 870px) {
     .autok-container {
         grid-template-columns: 100%;
+        background-color: black;
+        background-position: center;
+        background-repeat: repeat;
+        background-size: cover;
+        height: min(100%, 1200px);
+        padding-bottom: 10px;
+        flex-wrap: wrap;
     }
 
     .autok-auto-container {

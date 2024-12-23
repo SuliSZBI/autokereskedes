@@ -1,0 +1,50 @@
+.egyedi-auto-container {
+    align-items: center;
+    background-attachment: fixed;
+    color: var(--feher);
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 100px;
+    width: 100%;
+}
+
+.slider-container {
+    aspect-ratio: 16 / 9;
+    width: 50%;
+}
+
+.slider-container img {
+    border: 3px solid var(--narancs);
+    object-fit: fill;
+    width: 100%;
+}
+
+.egyedi-auto-container button {
+    background-color: var(--narancs);
+    border: none;
+    color: var(--feher);
+    font-family: var(--fredoka);
+    font-size: 1.5em;
+    padding: 0.5em;
+    width: 50%;
+}
+
+@media screen and (max-width: 550px) {
+    .egyedi-auto-container {
+        background-color: black;
+        background-position: center;
+        background-repeat: repeat;
+        background-size: cover;
+        height: min(100%, 1200px);
+        padding-top: 40px;
+        padding-bottom: 10px;
+        flex-wrap: wrap;
+    }
+
+    .slider-container {
+        width: 90%;
+    }
+}
